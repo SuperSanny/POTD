@@ -2,6 +2,7 @@
 import java.util.*;
 public class LongestCommonSubsequence {
     static int lcs(int x, int y, String s1, String s2) {
+        // Using Dynamic Programming
         int[][] dp = new int[x+1][y+1];
         for(int i = 0; i<= x; i++) {
             for(int j = 0; j<= y; j++){
@@ -11,6 +12,10 @@ public class LongestCommonSubsequence {
             }
         }
         return dp[x][y];
+        // Using Recursion
+//        if(x == 0 || y == 0) return 0;
+//        if(s1.charAt(x-1) == s2.charAt(y-1)) return 1 + lcs(x-1, y-1, s1, s2);
+//        return Math.max(lcs(x-1, y, s1, s2), lcs(x, y-1, s1, s2));
     }
     public static void main(String[] args) {
         int A = 6, B = 6;
