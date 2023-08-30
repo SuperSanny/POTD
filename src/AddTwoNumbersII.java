@@ -8,6 +8,13 @@ class ListNode {
     ListNode(int val) {
         this.val = val;
     }
+    public void printListNode(ListNode node) {
+        while(node != null) {
+            System.out.print(node.val + " -> ");
+            node = node.next;
+        }
+        System.out.print("null");
+    }
 }
 public class AddTwoNumbersII {
 
